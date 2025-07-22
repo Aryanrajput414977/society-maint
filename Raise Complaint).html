@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complaints</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h2>Raise a Complaint</h2>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="maintenance.html">Maintenance</a>
+      <a href="index.html" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <form id="complaintForm">
+      <label>Category</label>
+      <select id="compCategory" required>
+        <option>Water Issue</option>
+        <option>Power Failure</option>
+        <option>Security</option>
+      </select>
+      <label>Describe your issue</label>
+      <textarea id="compDesc" placeholder="Write here..." required></textarea>
+      <button type="submit">Submit Complaint</button>
+      <p id="compSuccess" style="color:green;"></p>
+    </form>
+    <h3>Your Previous Complaints</h3>
+    <table id="complaintsTable">
+      <tr>
+        <th>Date</th><th>Category</th><th>Status</th>
+      </tr>
+    </table>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
